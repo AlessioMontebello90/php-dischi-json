@@ -12,7 +12,7 @@
       <img src="" alt="" />
     </header>
     <div class="container" id="app">
-      <div class="grid" v-for="card in cards" :key="card">
+      <div class="grid" v-for="card in cards" :key="card.name">
         <img :src="card.photo" alt="" />
         <div>{{ card.name }}</div>
         <div>{{ card.artist }}</div>
