@@ -1,11 +1,24 @@
+body {
+  background-color: #1d2d3c;
+}
+
 header {
   height: 4rem;
   background-color: #06131f;
   margin-bottom: 2rem;
 }
-body {
-  background-color: #1d2d3c;
+.logo {
+  width: 100%;
+  height: 4rem;
+  max-width: 1100px;
+  margin: auto;
 }
+
+.small_logo {
+  width: 3%;
+  margin-bottom: 1rem;
+}
+
 #app {
   max-width: 1100px;
   margin: auto;

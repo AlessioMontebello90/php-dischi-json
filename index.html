@@ -21,7 +21,11 @@
   </head>
 
   <body>
-    <header></header>
+    <header class="d-flex align-items-center">
+      <div class="logo d-flex justify-content-start align-items-center">
+        <img class="small_logo" src="img/logo-small.svg" alt="" />
+      </div>
+    </header>
     <div class="d-flex justify-content-around flex-wrap" id="app">
       <div
         class="album d-flex flex-column align-items-center"
@@ -34,7 +38,6 @@
         <div class="date text-white">{{ card.date }}</div>
       </div>
     </div>
-
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
