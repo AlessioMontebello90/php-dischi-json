@@ -32,6 +32,7 @@
         :key="card.name"
       >
         <img
+          class="scale"
           data-bs-toggle="modal"
           :data-bs-target="'#exampleModal' + index"
           :src="card.photo"
@@ -49,7 +50,7 @@
         >
           <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
-              <div class="mod modal-header">
+              <div class="mod modal-header border-0">
                 <button
                   type="button"
                   class="btn-close"
@@ -61,9 +62,9 @@
                 class="mod modal-body d-flex flex-column justify-content-center align-items-center"
               >
                 <img :src="card.photo" />
-                <h4 class="text-center">{{ card.name }}</h4>
-                <small class="">{{ card.artist }}</small>
-                <div class="date">{{ card.date }}</div>
+                <h4 class="text-center text-white">{{ card.name }}</h4>
+                <small class="text-white">{{ card.artist }}</small>
+                <div class="date text-white">{{ card.date }}</div>
               </div>
             </div>
           </div>

@@ -23,7 +23,6 @@ header {
   max-width: 1100px;
   margin: auto;
 }
-
 .album {
   background-color: #112030;
   width: 300px;
@@ -31,12 +30,19 @@ header {
   border-radius: 0.5rem;
 }
 
+.album:hover {
+  cursor: pointer;
+}
+
+.scale:hover {
+  transform: scale(1.1);
+}
+
 img {
   width: 210px;
   height: 210px;
   margin-top: 1rem;
 }
-
 .date,
 h4 {
   font-weight: 700;
@@ -44,4 +50,12 @@ h4 {
 
 .mod {
   background-color: rgba(27, 55, 85, 0.7);
+}
+
+.modal-dialog {
+  opacity: 0.8;
+}
+
+.mod {
+  background-color: rgba(27, 55, 85, 0.9);
 }
