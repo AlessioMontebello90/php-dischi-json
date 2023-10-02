@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+img {
+  width: 250px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  padding-bottom: 1rem;
+  width: calc(100% / 3);
+}
