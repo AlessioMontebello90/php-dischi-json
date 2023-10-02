@@ -19,7 +19,6 @@
     ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <header class="d-flex align-items-center">
       <div class="logo d-flex justify-content-start align-items-center">
@@ -29,15 +28,49 @@
     <div class="d-flex justify-content-around flex-wrap" id="app">
       <div
         class="album d-flex flex-column align-items-center"
-        v-for="card in cards"
+        v-for="(card, index) in cards"
         :key="card.name"
       >
-        <img :src="card.photo" alt="" />
+        <img
+          data-bs-toggle="modal"
+          :data-bs-target="'#exampleModal' + index"
+          :src="card.photo"
+          alt=""
+        />
         <h4 class="text-white text-center">{{ card.name }}</h4>
         <small class="text-white">{{ card.artist }}</small>
         <div class="date text-white">{{ card.date }}</div>
+        <div
+          class="modal fade modal-fullscreen"
+          :id="'exampleModal' + index"
+          tabindex="-1"
+          :aria-labelledby="'exampleModalLabel' + index"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="mod modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div
+                class="mod modal-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <img :src="card.photo" />
+                <h4 class="text-center">{{ card.name }}</h4>
+                <small class="">{{ card.artist }}</small>
+                <div class="date">{{ card.date }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
